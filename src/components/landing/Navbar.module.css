@@ -1,4 +1,4 @@
-.navbar {
+.Navbar {
   height: 80px;
   display: flex;
   justify-content: center;
@@ -8,16 +8,16 @@
   top: 0;
   z-index: 999;
   color: black;
-  box-shadow: 0 10px 10px -6px grey;
+  box-shadow: 0px 8px 18px rgba(33, 20, 10, 0.12);
 }
 
-.navbar-container {
+.Navbar_container {
   display: flex;
   justify-content: space-between;
   height: 60px;
 }
 
-.container {
+.Container {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -25,7 +25,7 @@
   padding-left: 50px;
 }
 
-.navbar-logo {
+.Navbar_logo {
   color: black;
   justify-self: start;
   cursor: pointer;
@@ -35,11 +35,11 @@
   align-items: center;
 }
 
-.navbar-icon {
+.Navbar_icon {
   margin-right: 0.5rem;
 }
 
-.nav-menu {
+.Nav_menu {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,16 +48,15 @@
   transition: all 0.5s ease-in-out;
   padding: 0;
   margin: 0;
-  /* margin-bottom: 30px; */
 }
 
-.nav-item {
+.Nav_item {
   height: 60px;
   cursor: pointer;
   color: black;
 }
 
-.nav-links {
+.Nav_links {
   color: black;
   display: flex;
   align-items: center;
@@ -68,42 +67,20 @@
   margin-right: 50px;
 }
 
-.menu-icon {
+.Menu_icon {
   display: none;
   color: black;
 }
-.btn--outline {
-  background: #ff933b;
-  color: white;
-  padding: 8px 20px;
-  transition: all 0.3s ease-out;
-  border-radius: 8px;
+
+.EnterIcon {
+  margin-left: 14px;
 }
-.btn--outline svg {
-  margin-left: 5px;
-  padding-top: 5px;
-}
-.btn--mobile {
-  text-align: center;
-  border-radius: 4px;
-  width: 80%;
-  text-decoration: none;
-  font-size: 1.5rem;
-  /* background: transparent; */
-  color: #fff;
-  padding: 14px 20px;
-  border: 1px solid fff;
-  transition: all 0.3s ease-out;
-  background: #ff933b;
-}
-.nav-items {
+
+.Nav_items {
   cursor: pointer;
-  /* margin-right: 20px; */
 }
-.flex {
-  display: flex;
-}
-.select-lang {
+
+.Select_lang {
   border: none;
   font-size: 20px;
   cursor: pointer;
@@ -113,57 +90,66 @@
   margin: 2px;
 }
 @media screen and (max-width: 960px) {
-  .btn--outline {
-    border: none;
+  .Navbar {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
   }
-  .nav-items {
+  .Nav_items {
     display: none;
     cursor: pointer;
     margin-right: 0;
   }
-  .select-lang {
+  .Select_lang {
     margin: 15px;
   }
-  .navbar-container {
+  .Navbar_container {
     margin: 0;
     padding: 0;
   }
-  .nav-menu {
+  .Nav_menu {
     display: flex;
-    flex-direction: column;
     width: 100%;
     height: 40vh;
     position: absolute;
     top: 100%;
-    /* opacity: 1; */
     transition: all 0.1s ease-in-out;
-    /* box-shadow: 0 5px 16px -4px grey; */
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
   }
-
-  .nav-menu.active1 {
+  .Active1 {
     background: white;
     top: 100%;
-    /* opacity: 1; */
     transition: all 0.1s ease-in-out;
     width: 100%;
-    box-shadow: 0 10px 10px -6px grey;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
   }
-
-  .nav-links {
+  .Active1 li:first-child {
+    order: 1;
+    align-self: center;
+  }
+  .Active1 li:nth-child(2) {
+    order: 3;
+  }
+  .Active1 li:last-child {
+    order: 2;
+  }
+  .Nav_links {
     text-align: center;
     width: 100%;
     display: table;
   }
-
-  .nav-links:hover {
+  .Nav_links:hover {
     color: #242424;
   }
 
-  .nav-item:hover {
+  .Nav_item:hover {
     border: none;
   }
 
-  .nav-item {
+  .Nav_item {
     width: 40%;
     margin: 0;
     padding: 0;
@@ -172,14 +158,14 @@
     justify-content: center;
   }
 
-  .navbar-logo {
+  .Navbar_logo {
     position: absolute;
     top: 0;
     left: 0;
     margin: 5px 0 5px 5px;
   }
 
-  .menu-icon {
+  .Menu_icon {
     display: block;
     position: absolute;
     top: 0;
@@ -192,13 +178,5 @@
   .fa-times {
     color: #fff;
     font-size: 1rem;
-  }
-
-  .nav-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 120px;
   }
 }

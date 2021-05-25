@@ -1,13 +1,19 @@
 import React, { useState } from "react";
-import "./Navbar.css";
-// import { Link } from "react-router-dom";
+import classes from "./Navbar.module.css";
 import Button from "../UI/Button/Button";
-import LogoSalexSvg from "../UI/Svg/LogoSalexSvg";
-import MenuCloseSvg from "../UI/Svg/MenuCloseSvg";
-import MenuOpenSvg from "../UI/Svg/MenuOpenSvg";
-import EnterSvg from "../UI/Svg/EnterSvg";
+import {
+  EnterSvg,
+  LogoSalexSvg,
+  MenuCloseSvg,
+  MenuOpenSvg,
+} from "../UI/Svg/SvgIcons";
 
-function Navbar() {
+/* 
+  Jahongir: Navbar, Footer, Cards, Tabs
+  Sardor: Form Elements, Header, Sidebar, Section Title, Register - Login Forms
+*/
+
+const Navbar = () => {
   const [click, setClick] = useState(false);
   const [button] = useState(true);
   const handleClick = () => setClick(!click);
@@ -17,23 +23,27 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
-        <div className="navbar-container container">
-          <div to="/" className="navbar-logo" onClick={closeMobileMenu}>
+      <nav className={classes.Navbar}>
+        <div className={`${classes.Navbar_container} ${classes.Container}`}>
+          <div className={classes.Navbar_logo} onClick={closeMobileMenu}>
             <LogoSalexSvg />
           </div>
-          <div className="menu-icon" onClick={handleClick}>
+          <div className={classes.Menu_icon} onClick={handleClick}>
             {click ? <MenuCloseSvg /> : <MenuOpenSvg />}
           </div>
-          <ul className={click ? "nav-menu active1" : "nav-menu"}>
-            <li className={click ? "nav-item" : "nav-items"}>
-              <div to="/" className="nav-links">
-                Biz haqimizda
-              </div>
+          <ul
+            className={
+              click
+                ? `${classes.Nav_menu} ${classes.Active1}`
+                : classes.Nav_menu
+            }
+          >
+            <li className={click ? classes.Nav_item : classes.Nav_items}>
+              <div className={classes.Nav_links}>Biz haqimizda</div>
             </li>
 
-            <li className={click ? "nav-item" : "nav-items"}>
-              <select className="select-lang">
+            <li className={click ? classes.Nav_item : classes.Nav_items}>
+              <select className={classes.Select_lang}>
                 uzb
                 <option>uzb</option>
                 <option>ru</option>
@@ -41,16 +51,16 @@ function Navbar() {
               </select>
             </li>
 
-            <li className={click ? "nav-item" : "nav-items"}>
+            <li className={click ? classes.Nav_item : classes.Nav_items}>
               {button ? (
-                <div className="btn-link">
+                <div className={classes.Btn_link}>
                   <Button btnType="Main">
                     Kirish
-                    <EnterSvg />
+                    <EnterSvg className={classes.EnterIcon} />
                   </Button>
                 </div>
               ) : (
-                <div className="btn-link">
+                <div className={classes.Btn_link}>
                   <Button btnType="Main">
                     Kirish
                     <EnterSvg />
@@ -63,5 +73,5 @@ function Navbar() {
       </nav>
     </>
   );
-}
+};
 export default Navbar;
