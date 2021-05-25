@@ -1,4 +1,23 @@
-const LogoSalexSvg = () => {
+export const EnterSvg = ({ className }) => {
+  return (
+    <div className={className}>
+      <svg
+        width="18"
+        height="20"
+        viewBox="0 0 18 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2 13H4V18H16V2H4V7H2V1C2 0.734784 2.10536 0.48043 2.29289 0.292893C2.48043 0.105357 2.73478 0 3 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V19C18 19.2652 17.8946 19.5196 17.7071 19.7071C17.5196 19.8946 17.2652 20 17 20H3C2.73478 20 2.48043 19.8946 2.29289 19.7071C2.10536 19.5196 2 19.2652 2 19V13ZM8 9V6L13 10L8 14V11H0V9H8Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+  );
+};
+
+export const LogoSalexSvg = () => {
   return (
     <div>
       <svg
@@ -45,4 +64,40 @@ const LogoSalexSvg = () => {
   );
 };
 
-export default LogoSalexSvg;
+export const MenuCloseSvg = () => {
+  return (
+    <div>
+      <svg
+        width="22"
+        height="20"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.99888 6.35117L13.7739 0.576172L15.4236 2.22584L9.64855 8.00084L15.4236 13.7758L13.7739 15.4255L7.99888 9.6505L2.22389 15.4255L0.574219 13.7758L6.34922 8.00084L0.574219 2.22584L2.22389 0.576172L7.99888 6.35117Z"
+          fill="black"
+        />
+      </svg>
+    </div>
+  );
+};
+
+export const MenuOpenSvg = () => {
+  return (
+    <div>
+      <svg
+        width="22"
+        height="20"
+        viewBox="0 0 22 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.5 0.666016H21.5V2.99935H0.5V0.666016ZM7.5 8.83268H21.5V11.166H7.5V8.83268ZM0.5 16.9993H21.5V19.3327H0.5V16.9993Z"
+          fill="#21140A"
+        />
+      </svg>
+    </div>
+  );
+};
