@@ -5,6 +5,7 @@ import store from "./store";
 import { changeLanguage } from "./redux/actions/lang";
 import Input from "./components/UI/Input/Input";
 import Button from "./components/UI/Button/Button";
+import Navbar from "./components/landing/Navbar";
 
 const App = () => {
   useEffect(() => {
@@ -21,6 +22,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <div className="App">
+        <Navbar />
         <Input
           elementConfig={elementConfig}
           elementType="input"
