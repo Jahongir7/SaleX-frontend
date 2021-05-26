@@ -1,14 +1,18 @@
-import LogoSalexSvg from "../UI/Svg/LogoSalexSvg";
-import classes from "./Landing.module.css";
+import { LogoSalexSvg } from "../UI/Svg/SvgIcons";
+import classes from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <>
+    <footer>
       <div className={classes.Footer}>
-        <LogoSalexSvg />
+        <div className={classes.Footer_Logo}>
+          <LogoSalexSvg />
+        </div>
       </div>
-      <div className={classes.FooterText}>Copyright salex.uz 2021</div>
-    </>
+      <div className={classes.FooterText}>
+        <p>Copyright salex.uz 2021</p>
+      </div>
+    </footer>
   );
 };
 
