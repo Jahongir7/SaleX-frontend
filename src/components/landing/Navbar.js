@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classes from "./Navbar.module.css";
+import { useDispatch } from "react-redux";
 import Button from "../UI/Button/Button";
 import {
   EnterSvg,
@@ -15,10 +16,19 @@ import {
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const [lang, setLang] = useState("uz");
   const [button] = useState(true);
+  const dispatch = useDispatch();
   const handleClick = () => setClick(!click);
+
   const closeMobileMenu = () => {
     setClick(false);
+  };
+
+  const handleChange = (event) => {
+    dispatch({ type: "LANG_CHANGED", payload: event.target.value });
+    setLang(event.target.value);
+    localStorage.setItem("lang", event.target.value);
   };
 
   return (
@@ -43,11 +53,14 @@ const Navbar = () => {
             </li>
 
             <li className={click ? classes.Nav_item : classes.Nav_items}>
-              <select className={classes.Select_lang}>
-                uzb
-                <option>uzb</option>
-                <option>ru</option>
-                <option>eng</option>
+              <select
+                className={classes.Select_lang}
+                onChange={handleChange}
+                value={lang}
+              >
+                <option value="uz">Uzb</option>
+                <option value="ru">Ru</option>
+                <option value="en">Eng</option>
               </select>
             </li>
 

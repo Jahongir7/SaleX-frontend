@@ -1,7 +1,11 @@
 import { LANG_CHANGED } from "../actions/actionTypes";
 
+const defaultLang = localStorage.getItem("lang")
+  ? localStorage.getItem("lang")
+  : "uz";
+
 const initialState = {
-  language: "uz",
+  language: defaultLang,
   error: {},
 };
 

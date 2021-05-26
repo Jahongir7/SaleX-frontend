@@ -5,5 +5,4 @@ export const changeLanguage = (lang) => (dispatch) => {
     type: LANG_CHANGED,
     payload: lang,
   });
-  console.log("lang changed");
 };
