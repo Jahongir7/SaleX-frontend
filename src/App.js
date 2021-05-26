@@ -1,11 +1,18 @@
+import { useEffect } from "react";
 import "./App.css";
+import { Provider } from "react-redux";
+import store from "./store";
+import { changeLanguage } from "./redux/actions/lang";
 import Input from "./components/UI/Input/Input";
 import Button from "./components/UI/Button/Button";
 import Navbar from "./components/landing/Navbar";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/landing/Footer";
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    changeLanguage("uz");
+  }, []);
+
   const elementConfig = { type: "text", placeholder: "Search" };
   const options = [
     { value: "cars", displayValue: "Cars" },
@@ -14,8 +21,8 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <Router>
+    <Provider store={store}>
+      <div className="App">
         <Navbar />
         <Input
           elementConfig={elementConfig}
@@ -24,14 +31,10 @@ function App() {
         />
         <Input elementType="select" options={options} label="Choose" />
         <Button btnType="Main">Click</Button>
-
         <Footer />
-        <Switch>
-          <Route path="/" />
-        </Switch>
-      </Router>
-    </div>
+      </div>
+    </Provider>
   );
-}
+};
 
 export default App;
