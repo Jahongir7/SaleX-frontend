@@ -1,7 +1,8 @@
-
 import classes from './Button.module.css'
 
 const Button = (props) => (
+    // btnType = Main bo`lsa asosiy orange rangli button
+
     <button
         disabled={props.disabled}
         onClick={props.clicked}

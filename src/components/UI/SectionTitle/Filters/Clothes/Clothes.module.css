@@ -1,0 +1,28 @@
+.Clothes {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.Clothes > div:first-child {
+    width: 260px;
+    margin: 0 32px 40px 0;
+}
+
+.Clothes > div:nth-child(2) {
+    width: 212px;
+    margin: 0 32px 40px 0;
+}
+
+.Clothes > div:last-child {
+    width: 196px;
+    margin: 0 32px 40px 0;
+}
+
+@media (max-width: 520px) {
+    .Clothes > div:first-child, .Clothes > div:nth-child(2),
+    .Clothes > div:last-child {
+        width: 100%;
+        margin: 0 20px 20px;
+    }
+}

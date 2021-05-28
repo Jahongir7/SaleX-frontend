@@ -1,13 +1,14 @@
 .Button {
     background-color: transparent;
-    color: #21140A;
+    color: #21140a;
     outline: none;
     cursor: pointer;
     font: inherit;
     padding: 15px 36px;
     margin: 10px;
-    border: 1px solid #FF933B;
+    border: 1px solid #ff933b;
     border-radius: 6px;
+    display: flex;
 }
 
 .Main {

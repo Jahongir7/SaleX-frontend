@@ -1,32 +1,13 @@
 import "./App.css";
-import Input from "./components/UI/Input/Input";
-import Button from "./components/UI/Button/Button";
+import SectionTitle from "./components/UI/SectionTitle/SectionTitle";
 
 function App() {
-    const elementConfig = {type: 'text', placeholder: 'Search'}
-    const options = [
-        {value: 'cars', displayValue: 'Cars'},
-        {value: 'jobs', displayValue: 'Jobs'},
-        {value: 'services', displayValue: 'Services'}
-    ]
 
     return <div className="App">
-        <Input
-            elementConfig={elementConfig}
-            elementType='input'
-            label='Search products'
+        <SectionTitle
+            titleType='filters'
+            filterType='property'
         />
-        <Input
-            elementType='select'
-            options={options}
-            label='Choose'
-        />
-        <Button
-            btnType='Main'
-        >
-            Click
-        </Button>
-
     </div>;
 }
 

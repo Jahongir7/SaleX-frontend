@@ -1,0 +1,39 @@
+.Property {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.Property > div:first-child {
+    width: 260px;
+    margin: 0 32px 40px 0;
+}
+
+.Property > div:nth-child(2) {
+    width: 212px;
+    margin: 0 32px 40px 0;
+}
+
+.Property > div:nth-child(3) {
+    width: 196px;
+    margin: 0 32px 40px 0;
+}
+
+.Property > div:nth-child(4) {
+    width: 196px;
+    margin: 0 32px 40px 0;
+}
+
+.Property > div:last-child {
+    width: 196px;
+    margin: 0 32px 40px 0;
+}
+
+@media (max-width: 520px) {
+    .Property > div:first-child, .Property > div:nth-child(2),
+    .Property > div:nth-child(3), .Property > div:nth-child(4),
+    .Property > div:last-child {
+        width: 100%;
+        margin: 0 20px 20px;
+    }
+}
