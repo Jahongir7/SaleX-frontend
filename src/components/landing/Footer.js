@@ -5,7 +5,6 @@ const Footer = () => {
   return (
     <footer>
       <div className={classes.Container}>
-        dhdty
         <div className={classes.Footer}>
           <div className={classes.Footer_Logo}>
             <LogoSalexSvg />

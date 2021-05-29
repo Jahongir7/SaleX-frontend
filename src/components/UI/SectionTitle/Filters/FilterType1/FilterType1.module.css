@@ -1,0 +1,33 @@
+.FilterType1 {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.FilterType1 > div:first-child {
+    width: 308px;
+    margin: 0 32px 40px 0;
+}
+
+.FilterType1 > div:nth-child(2) {
+    width: 212px;
+    margin: 0 32px 40px 0;
+}
+
+.FilterType1 > div:nth-child(3) {
+    width: 210px;
+    margin: 0 32px 40px 0;
+}
+
+.FilterType1 > div:last-child {
+    width: 196px;
+    margin: 0 32px 40px 0;
+}
+
+@media (max-width: 520px) {
+    .FilterType1 > div:first-child, .FilterType1 > div:nth-child(2),
+    .FilterType1 > div:nth-child(3), .FilterType1 > div:last-child {
+        width: 100%;
+        margin: 0 20px 20px;
+    }
+}

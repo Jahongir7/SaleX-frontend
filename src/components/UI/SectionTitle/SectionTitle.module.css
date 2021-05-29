@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.SectionTitle {
+    width: 100%;
+    padding: 20px;
+    /*border-bottom: 1px solid #808080;*/
+    /*padding: 5px;*/
+}
+
+.SectionTitle p {
+    line-height: 60px;
+    font-size: 30px;
+}
+
+@media (max-width: 520px) {
+    .SectionTitle {
+        padding: 0;
+    }
+
+    .DesktopOnly {
+        display: none;
+    }
+
+    .SectionTitle p {
+        line-height: 33px;
+        font-size: 28px;
+        padding: 10px 20px;
+    }
+}

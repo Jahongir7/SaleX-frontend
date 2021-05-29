@@ -7,6 +7,7 @@ import Input from "./components/UI/Input/Input";
 import Button from "./components/UI/Button/Button";
 import Navbar from "./components/landing/Navbar";
 import Footer from "./components/landing/Footer";
+import SectionTitle from "./components/UI/SectionTitle/SectionTitle";
 
 const App = () => {
   useEffect(() => {
@@ -31,6 +32,7 @@ const App = () => {
         />
         <Input elementType="select" options={options} label="Choose" />
         <Button btnType="Main">Click</Button>
+        <SectionTitle />
         <Footer />
       </div>
     </Provider>
