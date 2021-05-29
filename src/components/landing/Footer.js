@@ -4,13 +4,16 @@ import classes from "./Footer.module.css";
 const Footer = () => {
   return (
     <footer>
-      <div className={classes.Footer}>
-        <div className={classes.Footer_Logo}>
-          <LogoSalexSvg />
+      <div className={classes.Container}>
+        dhdty
+        <div className={classes.Footer}>
+          <div className={classes.Footer_Logo}>
+            <LogoSalexSvg />
+          </div>
+          <div className={classes.FooterText}>
+            <p>Copyright salex.uz 2021</p>
+          </div>
         </div>
-      </div>
-      <div className={classes.FooterText}>
-        <p>Copyright salex.uz 2021</p>
       </div>
     </footer>
   );
